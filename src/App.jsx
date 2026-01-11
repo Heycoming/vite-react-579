@@ -1,29 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+import { Routes, Route } from 'react-router-dom';
+// ... 引入 Header, Footer ...
+import Home from './pages/Home';
+import About from './pages/About';          // <--- 确保引入
+import NorthMichigan from './pages/NorthMichigan';
+import Reminder from './pages/Reminder';    // <--- 确保引入
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1>VITE REACT 579</h1>
-      <div className="card">
-        <p><strong>My name: Lubing Han</strong></p>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <span>{'🥕'.repeat(count)}</span>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app-container">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />          {/* <--- 路由配置 */}
+        <Route path="/north-michigan" element={<NorthMichigan />} />
+        <Route path="/reminder" element={<Reminder />} />    {/* <--- 路由配置 */}
+      </Routes>
+      <Footer />
+    </div>
   )
 }
 
-export default App
+export default App;
