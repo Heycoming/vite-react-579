@@ -60,7 +60,7 @@ export default function Header() {
         </nav>
 
         <Link to="/" className="logo">
-          <img src="/image/logo.png" alt="Logo" />
+          <img src="/Shirley_Travel_Journal/images/logo.png" alt="Logo" />
         </Link>
 
         <nav className="nav-right">
@@ -81,7 +81,7 @@ export default function Header() {
       {/* Mobile Overlay */}
       <div className={`mobile-menu-overlay ${mobileMenuOpen ? 'active' : ''}`}>
         <div className="mobile-menu-header">
-          <div className="logo"><img src="/image/logo.png" alt="Logo" /></div>
+          <div className="logo"><img src="/Shirley_Travel_Journal/images/logo.png" alt="Logo" /></div>
           <div className="close-menu" onClick={toggleMobileMenu}>✕</div>
         </div>
         
