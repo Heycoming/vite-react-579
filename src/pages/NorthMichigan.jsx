@@ -6,34 +6,52 @@ export default function NorthMichigan() {
     window.scrollTo(0, 0);
   }, []);
 
+  // ✅ 路径修复：定义基础路径
+  // 如果你的图片在 public/Shirley_Travel_Journal/images/ 下，请保持这个前缀
+  // 如果图片直接在 public/images/ 下，请把前缀改为 '/images/'
+  const IMG_PATH = '/Shirley_Travel_Journal/images/'; 
+
   const michiganData = [
     {
       dayLabel: "Day 1",
-      location: "SkyBridge Michigan",
-      stay: "Boyne Mountain",
-      description: "If you're looking for an unforgettable travel experience that combines breathtaking views, a touch of adventure, and a unique engineering marvel, then SkyBridge Michigan at Boyne Mountain Resort should definitely be on your bucket list.",
-      image: "/Shirley_Travel_Journal/images/day1-1.jpg" 
+      image: `${IMG_PATH}day1-1.jpg`,
+      // 将内容拆分为数组，以匹配 HTML 中的 li.location 和 li.highlight
+      content: [
+        { type: "location", text: "Our Thrilling Adventure at SkyBridge Michigan" },
+        { type: "highlight", text: "If you're looking for an unforgettable travel experience that combines breathtaking views, a touch of adventure, and a unique engineering marvel, then SkyBridge Michigan at Boyne Mountain Resort should definitely be on your bucket list. Recently, we had the chance to visit this incredible destination, and it was nothing short of magical. Here’s a glimpse into our day at the world’s longest timber-towered suspension bridge!" },
+        { type: "location", text: "The Ride Up" },
+        { type: "highlight", text: "To reach the SkyBridge, we hopped on the resort’s chairlift, which took us on a relaxing ride up the mountain. The views from the lift were already incredible — rolling hills, dense forests, and even a glimpse of the bridge itself in the distance. It was the perfect way to set the tone for what was to come." }
+      ]
     },
     {
       dayLabel: "Day 2",
-      location: "Tahquamenon Falls",
-      stay: "Upper Peninsula",
-      description: "Known as one of the largest waterfalls east of the Mississippi, this stunning location offers a perfect mix of adventure and tranquility. The amber hue of the water, caused by tannins from cedar trees, added a unique touch to its beauty.",
-      image: "/Shirley_Travel_Journal/images/day2.jpg"
+      image: `${IMG_PATH}day2.jpg`,
+      content: [
+        { type: "location", text: "Exploring the Majestic Tahquamenon Falls" },
+        { type: "highlight", text: "If you’re searching for a serene yet awe-inspiring travel destination surrounded by natural beauty, Tahquamenon Falls in Michigan’s Upper Peninsula is a must-visit. Known as one of the largest waterfalls east of the Mississippi, this stunning location offers a perfect mix of adventure and tranquility. Recently, we had the pleasure of exploring this natural wonder, and it was an experience we’ll never forget. Here’s a peek into our day at this iconic spot!" },
+        { type: "location", text: "The Journey to the Falls" },
+        { type: "highlight", text: "Our adventure began with a scenic drive through the Upper Peninsula’s dense forests, which were alive with vibrant colors during the fall season. Upon arriving at Tahquamenon Falls State Park, we were greeted by the soothing sound of rushing water and the fresh, earthy scent of the woods. The short walk to the falls was an experience in itself, with well-maintained trails that meandered through the lush forest." }
+      ]
     },
     {
       dayLabel: "Day 3",
-      location: "Houghton, Michigan",
-      stay: "Houghton",
-      description: "Nestled in Michigan’s Upper Peninsula, Houghton is a hidden gem that offers a perfect blend of natural beauty, rich history, and outdoor adventure. Known as the gateway to the Keweenaw Peninsula.",
-      image: "/Shirley_Travel_Journal/images/day3.jpg"
+      image: `${IMG_PATH}day3.jpg`,
+      content: [
+        { type: "location", text: "Discovering the Charm of Houghton, Michigan" },
+        { type: "highlight", text: "Nestled in Michigan’s Upper Peninsula, Houghton is a hidden gem that offers a perfect blend of natural beauty, rich history, and outdoor adventure. Known as the gateway to the Keweenaw Peninsula, this charming town is surrounded by stunning landscapes and the sparkling waters of Portage Lake. Recently, we spent a day exploring Houghton, and it was an unforgettable experience. Here’s a glimpse into our adventure in this picturesque town!" },
+        { type: "location", text: "A Stroll Through Downtown Houghton" },
+        { type: "highlight", text: "Our day began with a leisurely stroll through Houghton’s historic downtown. The quaint streets are lined with unique shops, cozy cafes, and restaurants, all set against the backdrop of the iconic Portage Lake Lift Bridge. We couldn’t resist stopping for a coffee at one of the local spots while soaking in the vibrant energy of the town." }
+      ]
     },
     {
       dayLabel: "Day 4",
-      location: "Porcupine Mountains",
-      stay: "Ontonagon",
-      description: "Known for their rugged beauty, this state park is a haven for hikers, nature lovers, and adventure seekers alike. Our day started with a hike to the stunning Lake of the Clouds overlook.",
-      image: "/Shirley_Travel_Journal/images/day4.jpg"
+      image: `${IMG_PATH}day4.jpg`,
+      content: [
+        { type: "location", text: "Exploring the Beauty of Porcupine Mountains" },
+        { type: "highlight", text: "If you’re craving an escape into untouched wilderness, the Porcupine Mountains in Michigan’s Upper Peninsula are the perfect destination. Known as their rugged beauty, this state park is a haven for hikers, nature lovers, and adventure seekers alike. Here’s a quick look at our visit!" },
+        { type: "location", text: "Hiking to Lake of the Clouds" },
+        { type: "highlight", text: "Our day started with a hike to the stunning Lake of the Clouds overlook. The view from the top was absolutely breathtaking, with the shimmering lake surrounded by dense forests and rolling hills. It’s a scene that feels straight out of a postcard." }
+      ]
     }
   ];
 
@@ -53,10 +71,6 @@ export default function NorthMichigan() {
         ></iframe>
       </div>
 
-      {/* 
-         ✅ 父组件负责外层 Section 
-         DaysGallery 只负责渲染内部的 Flex/Grid 内容 
-      */}
       <section id="days-gallery">
         <div className="gallery-container">
           <DaysGallery days={michiganData} />

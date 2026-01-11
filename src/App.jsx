@@ -29,7 +29,7 @@ export default function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/north-michigan" element={<NorthMichigan />} />
+        <Route path="/NorthMichigan" element={<NorthMichigan />} />
         <Route path="/reminder" element={<Reminder />} />
       </Route>
 
