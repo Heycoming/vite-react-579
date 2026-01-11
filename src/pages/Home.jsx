@@ -6,7 +6,7 @@ import HeroSlider from '../components/HeroSlider';
 const homeSlidesData = [
   { 
     id: 0, 
-    img: '/images/cover.jpg', 
+    img: '/Shirley_Travel_Journal/images/cover.jpg', 
     title: 'Travel Journal', 
     meta1: "Shirley's", 
     meta2: "Always", 
@@ -14,7 +14,7 @@ const homeSlidesData = [
   },
   { 
     id: 1, 
-    img: '/images/zion_cover.jpg', 
+    img: '/Shirley_Travel_Journal/images/zion_cover.jpg', 
     title: 'The West', 
     meta1: "Explore", 
     meta2: "Vast", 
@@ -22,7 +22,7 @@ const homeSlidesData = [
   },
   { 
     id: 2, 
-    img: '/images/seattle_cover.jpg', 
+    img: '/Shirley_Travel_Journal/images/seattle_cover.jpg', 
     title: 'Seattle Views', 
     meta1: "Discover", 
     meta2: "Journey", 
@@ -30,7 +30,7 @@ const homeSlidesData = [
   },
   { 
     id: 3, 
-    img: '/images/nm_cover.jpg', 
+    img: '/Shirley_Travel_Journal/images/nm_cover.jpg', 
     title: 'North Michigan', 
     meta1: "Explore", 
     meta2: "Beach", 
@@ -50,7 +50,7 @@ export default function Home() {
         <a href="#NY" tabIndex={0}>
           <div className="icon-title-container">
             <div className="clock">
-              <img src="/images/NY.png" alt="NY Logo" />
+              <img src="/Shirley_Travel_Journal/images/NY.png" alt="NY Logo" />
             </div>
             <div className="country">New York</div>
           </div>
@@ -58,7 +58,7 @@ export default function Home() {
         <a href="#FL" tabIndex={0}>
           <div className="icon-title-container">
             <div className="clock">
-              <img src="/images/FL.png" alt="FL Logo" />
+              <img src="/Shirley_Travel_Journal/images/FL.png" alt="FL Logo" />
             </div>
             <div className="country">Florida</div>
           </div>
@@ -67,7 +67,7 @@ export default function Home() {
         <a href="#PA" tabIndex={0}>
           <div className="icon-title-container">
             <div className="clock">
-              <img src="/images/PA.png" alt="PA Logo" />
+              <img src="/Shirley_Travel_Journal/images/PA.png" alt="PA Logo" />
             </div>
             <div className="country">Pennsylvania</div>
           </div>
@@ -76,7 +76,7 @@ export default function Home() {
         <a href="#WA" tabIndex={0}>
           <div className="icon-title-container">
             <div className="clock">
-              <img src="/images/WA.png" alt="WA Logo" />
+              <img src="/Shirley_Travel_Journal/images/WA.png" alt="WA Logo" />
             </div>
             <div className="country">Washington</div>
           </div>
@@ -85,7 +85,7 @@ export default function Home() {
         <a href="#AZ" tabIndex={0}>
           <div className="icon-title-container">
             <div className="clock">
-              <img src="/images/AZ.png" alt="AZ Logo" />
+              <img src="/Shirley_Travel_Journal/images/AZ.png" alt="AZ Logo" />
             </div>
             <div className="country">Arizona</div>
           </div>
@@ -94,7 +94,7 @@ export default function Home() {
         <a href="#MI" tabIndex={0}>
           <div className="icon-title-container">
             <div className="clock">
-              <img src="/images/MI.png" alt="MI Logo" />
+              <img src="/Shirley_Travel_Journal/images/MI.png" alt="MI Logo" />
             </div>
             <div className="country">Michigan</div>
           </div>
@@ -110,7 +110,7 @@ export default function Home() {
 
             <div className="card" id="NY" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/NYC_cover.jpg" alt="NYC Cover" />
+                <img src="/Shirley_Travel_Journal/images/NYC_cover.jpg" alt="NYC Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Eastern</div>
@@ -122,7 +122,7 @@ export default function Home() {
 
             <div className="card" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/ithaca_cover.jpg" alt="Ithaca Cover" />
+                <img src="/Shirley_Travel_Journal/images/ithaca_cover.jpg" alt="Ithaca Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Eastern</div>
@@ -134,7 +134,7 @@ export default function Home() {
 
             <div className="card" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/syracuse_cover.JPG" alt="Syracuse cover" />
+                <img src="/Shirley_Travel_Journal/images/syracuse_cover.JPG" alt="Syracuse cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Eastern</div>
@@ -146,7 +146,7 @@ export default function Home() {
 
             <div className="card" id="FL" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/miami_cover.jpg" alt="Miami Cover" />
+                <img src="/Shirley_Travel_Journal/images/miami_cover.jpg" alt="Miami Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Eastern</div>
@@ -158,7 +158,7 @@ export default function Home() {
 
             <div className="card" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/las_vegas_cover.jpg" alt="Las Vegas Cover" />
+                <img src="/Shirley_Travel_Journal/images/las_vegas_cover.jpg" alt="Las Vegas Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Pacific</div>
@@ -170,7 +170,7 @@ export default function Home() {
 
             <div className="card" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/zion_cover.jpg" alt="Zion Cover" />
+                <img src="/Shirley_Travel_Journal/images/zion_cover.jpg" alt="Zion Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Mountain</div>
@@ -182,7 +182,7 @@ export default function Home() {
 
             <div className="card" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/bryce_cover.jpg" alt="Bryce Cover" />
+                <img src="/Shirley_Travel_Journal/images/bryce_cover.jpg" alt="Bryce Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Mountain</div>
@@ -194,7 +194,7 @@ export default function Home() {
 
             <div className="card" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/hanksville.jpg" alt="Hanksville Cover" />
+                <img src="/Shirley_Travel_Journal/images/hanksville.jpg" alt="Hanksville Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Mountain</div>
@@ -206,7 +206,7 @@ export default function Home() {
 
             <div className="card" id="AZ" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/monument_valley.jpg" alt="Monument Valley Cover" />
+                <img src="/Shirley_Travel_Journal/images/monument_valley.jpg" alt="Monument Valley Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Mountain</div>
@@ -218,7 +218,7 @@ export default function Home() {
 
             <div className="card" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/antelope_cover.jpg" alt="Antelope Cover" />
+                <img src="/Shirley_Travel_Journal/images/antelope_cover.jpg" alt="Antelope Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Mountain</div>
@@ -230,7 +230,7 @@ export default function Home() {
 
             <div className="card" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/grand_cover.jpg" alt="Grand Canyon Cover" />
+                <img src="/Shirley_Travel_Journal/images/grand_cover.jpg" alt="Grand Canyon Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Mountain</div>
@@ -242,7 +242,7 @@ export default function Home() {
 
             <div className="card" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/sedona_cover.jpg" alt="Sedona Cover" />
+                <img src="/Shirley_Travel_Journal/images/sedona_cover.jpg" alt="Sedona Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Mountain</div>
@@ -254,7 +254,7 @@ export default function Home() {
 
             <div className="card" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/shiprock_cover.jpg" alt="Shiprock Cover" />
+                <img src="/Shirley_Travel_Journal/images/shiprock_cover.jpg" alt="Shiprock Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Mountain</div>
@@ -266,7 +266,7 @@ export default function Home() {
 
             <div className="card" id="PA" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/phi_cover.jpg" alt="Philadelphia Cover" />
+                <img src="/Shirley_Travel_Journal/images/phi_cover.jpg" alt="Philadelphia Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Eastern</div>
@@ -278,7 +278,7 @@ export default function Home() {
 
             <div className="card" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/DC_cover.jpg" alt="DC Cover" />
+                <img src="/Shirley_Travel_Journal/images/DC_cover.jpg" alt="DC Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Eastern</div>
@@ -290,7 +290,7 @@ export default function Home() {
 
             <div className="card" id="WA" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/seattle_cardcover.jpg" alt="Seattle Cover" />
+                <img src="/Shirley_Travel_Journal/images/seattle_cardcover.jpg" alt="Seattle Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Pacific</div>
@@ -302,7 +302,7 @@ export default function Home() {
 
             <div className="card" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/wheat_cover.jpg" alt="Wheat Field Cover" />
+                <img src="/Shirley_Travel_Journal/images/wheat_cover.jpg" alt="Wheat Field Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Pacific</div>
@@ -314,7 +314,7 @@ export default function Home() {
 
             <div className="card" id="MI" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/aa_cover.jpg" alt="Ann Arbor Cover" />
+                <img src="/Shirley_Travel_Journal/images/aa_cover.jpg" alt="Ann Arbor Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Eastern</div>
@@ -326,7 +326,7 @@ export default function Home() {
 
             <div className="card" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/nm_cardcover.jpg" alt="North Michigan Cover" />
+                <img src="/Shirley_Travel_Journal/images/nm_cardcover.jpg" alt="North Michigan Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Eastern</div>
@@ -338,7 +338,7 @@ export default function Home() {
 
             <div className="card" tabIndex={0}>
               <div className="card-image">
-                <img src="/images/columbus_cover.jpg" alt="Columbus Cover" />
+                <img src="/Shirley_Travel_Journal/images/columbus_cover.jpg" alt="Columbus Cover" />
               </div>
               <div className="card-content">
                 <div className="location-tag">Eastern</div>

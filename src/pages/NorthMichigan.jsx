@@ -13,28 +13,28 @@ export default function NorthMichigan() {
       location: "SkyBridge Michigan", // 对应 HTML 中的 location
       stay: "Boyne Mountain", // 这里我根据内容补充了一个 stay，或者你可以留空
       description: "If you're looking for an unforgettable travel experience that combines breathtaking views, a touch of adventure, and a unique engineering marvel, then SkyBridge Michigan at Boyne Mountain Resort should definitely be on your bucket list.",
-      image: "/images/day1-1.jpg" 
+      image: "/Shirley_Travel_Journal/images/day1-1.jpg" 
     },
     {
       dayLabel: "Day 2",
       location: "Tahquamenon Falls",
       stay: "Upper Peninsula",
       description: "Known as one of the largest waterfalls east of the Mississippi, this stunning location offers a perfect mix of adventure and tranquility. The amber hue of the water, caused by tannins from cedar trees, added a unique touch to its beauty.",
-      image: "/images/day2.jpg"
+      image: "/Shirley_Travel_Journal/images/day2.jpg"
     },
     {
       dayLabel: "Day 3",
       location: "Houghton, Michigan",
       stay: "Houghton",
       description: "Nestled in Michigan’s Upper Peninsula, Houghton is a hidden gem that offers a perfect blend of natural beauty, rich history, and outdoor adventure. Known as the gateway to the Keweenaw Peninsula.",
-      image: "/images/day3.jpg"
+      image: "/Shirley_Travel_Journal/images/day3.jpg"
     },
     {
       dayLabel: "Day 4",
       location: "Porcupine Mountains",
       stay: "Ontonagon",
       description: "Known for their rugged beauty, this state park is a haven for hikers, nature lovers, and adventure seekers alike. Our day started with a hike to the stunning Lake of the Clouds overlook.",
-      image: "/images/day4.jpg"
+      image: "/Shirley_Travel_Journal/images/day4.jpg"
     }
   ];
 
