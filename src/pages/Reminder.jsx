@@ -3,83 +3,98 @@ import { useLocation, Link } from 'react-router-dom';
 
 export default function Reminder() {
   const location = useLocation();
-  const [message, setMessage] = useState({ title: "Coming Soon", text: "This destination is being documented." });
+  
+  // 默认状态：对应你 HTML 中的默认文本
+  const [content, setContent] = useState({
+    title: "Not Implemented",
+    metaTop: "Coming Soon",
+    metaBottom: "Under Construction",
+    description: "This page is currently under construction."
+  });
 
   useEffect(() => {
-    // 获取 URL 中的 hash (例如 #coffee)
     const hash = location.hash;
 
+    // 根据 Hash 改变显示的标题和描述
     switch(hash) {
       case '#coffee':
-        setMessage({ 
-          title: "Buy Me a Coffee ☕", 
-          text: "The donation feature is on its way! Thank you for your support." 
+        setContent({
+          title: "Tip A Coffee ☕",
+          metaTop: "Support Me",
+          metaBottom: "Coming Soon",
+          description: "The donation feature is on its way! Thank you for your support."
         });
         break;
       case '#nyc':
-        setMessage({ 
-          title: "New York City 🍎", 
-          text: "The Big Apple guide is currently being written." 
+        setContent({
+          title: "New York City",
+          metaTop: "Coming Soon",
+          metaBottom: "The Big Apple",
+          description: "The guide to NYC is currently being written. Stay tuned!"
         });
         break;
       case '#ithaca':
-        setMessage({ 
-          title: "Ithaca is Gorges 🌊", 
-          text: "Photos of waterfalls are being developed." 
+        setContent({
+          title: "Ithaca",
+          metaTop: "Coming Soon",
+          metaBottom: "Gorges & Waterfalls",
+          description: "Photos of the beautiful waterfalls are being developed."
         });
         break;
+      // ... 你可以继续添加其他 case，比如 #miami, #vegas 等
       default:
-        setMessage({ 
-          title: "Coming Soon 🚧", 
-          text: "This section is under construction. Please check back later!" 
+        // 如果是其他未定义的 hash，或者没有 hash，保持默认
+        setContent({
+          title: "Not Implemented",
+          metaTop: "Coming Soon",
+          metaBottom: "Under Construction",
+          description: "This page is currently under construction."
         });
     }
   }, [location]);
 
   return (
-    <main id="maincon" style={styles.container}>
-      <div style={styles.card}>
-        <h1 style={styles.title}>{message.title}</h1>
-        <p style={styles.text}>{message.text}</p>
-        
-        <div style={styles.buttonGroup}>
-          <Link to="/" className="donate-link" style={{ display: 'inline-block', textDecoration: 'none' }}>
-            Back to Home
-          </Link>
+    <main id="maincon">
+      {/* 复用 About 页面的 Hero 结构 */}
+      <section id="about-hero">
+        <div className="hero-content" tabIndex="0">
+          <div className="meta">{content.metaTop}</div>
+          <h1>{content.title}</h1>
+          <div className="meta">{content.metaBottom}</div>
+          
+          <p className="tagline" style={{ marginTop: '20px' }}>
+            {content.description}<br />
+            Please visit my implemented pages:
+          </p>
+          
+          {/* 底部导航链接 */}
+          <p className="tagline" style={{ marginTop: '20px', fontSize: '18px' }}>
+            <Link to="/" style={styles.link}>Home</Link> 
+            &nbsp;•&nbsp; 
+            <Link to="/north-michigan" style={styles.link}>North Michigan</Link> 
+            &nbsp;•&nbsp; 
+            <Link to="/about" style={styles.link}>About Me</Link>
+          </p>
         </div>
-      </div>
+        
+        <div className="hero-image">
+          {/* 确保图片路径正确 */}
+          <img 
+            src="/Shirley_Travel_Journal/images/cover.jpg" 
+            alt="Page under construction" 
+            style={{ filter: 'brightness(0.3)' }} 
+          />
+        </div>
+      </section>
     </main>
   );
 }
 
-// 简单的内联样式，保证这个页面即使没有 CSS 也能居中显示
-const styles = {
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    minHeight: '60vh', // 占据大部分屏幕高度
-    textAlign: 'center',
-    padding: '20px'
-  },
-  card: {
-    background: 'rgba(255, 255, 255, 0.05)',
-    padding: '40px',
-    borderRadius: '15px',
-    backdropFilter: 'blur(10px)',
-    border: '1px solid rgba(255, 255, 255, 0.1)',
-    maxWidth: '500px',
-    width: '100%'
-  },
-  title: {
-    fontSize: '2rem',
-    marginBottom: '20px',
-    color: '#ffd700' // 金色
-  },
-  text: {
-    fontSize: '1.2rem',
-    marginBottom: '30px',
-    lineHeight: '1.6',
-    color: 'rgba(255, 255, 255, 0.8)'
-  }
-};
+// 简单的样式对象，用于覆盖链接颜色，保持和 HTML 一致
+// const styles = {
+//   link: {
+//     color: '#fff',
+//     textDecoration: 'underline',
+//     cursor: 'pointer'
+//   }
+// };
