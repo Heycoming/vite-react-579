@@ -127,7 +127,7 @@ export default function DesktopNav({ mobileMenuOpen, toggleMobileMenu }) {
 
       {/* Desktop Right Navigation */}
       <nav className="nav-right" aria-label="Right navigation">
-        <a href="/#gallery" tabIndex="0">Photography</a>
+        <a href="/Shirley_Travel_Journal/#gallery" tabIndex="0">Photography</a>
         <Link to="/about" tabIndex="0" className={isActive('/about')}>About Me</Link>
       </nav>
 

@@ -71,7 +71,7 @@ export default function Reminder() {
           <p className="tagline" style={{ marginTop: '20px', fontSize: '18px' }}>
             <Link to="/" style={styles.link}>Home</Link> 
             &nbsp;•&nbsp; 
-            <Link to="/north-michigan" style={styles.link}>North Michigan</Link> 
+            <Link to="/NorthMichigan" style={styles.link}>North Michigan</Link> 
             &nbsp;•&nbsp; 
             <Link to="/about" style={styles.link}>About Me</Link>
           </p>

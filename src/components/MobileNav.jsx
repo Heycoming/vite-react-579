@@ -5,6 +5,7 @@ export default function MobileNav({ isOpen, onClose }) {
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
 
+  // 当菜单关闭时，重置所有折叠状态
   useEffect(() => {
     if (!isOpen) {
       setMobileDropdownOpen(false);
@@ -12,8 +13,16 @@ export default function MobileNav({ isOpen, onClose }) {
     }
   }, [isOpen]);
 
-  const toggleSubmenu = (name) => {
+  const toggleSubmenu = (e, name) => {
+    e.preventDefault();
+    e.stopPropagation(); // 防止冒泡
     setActiveSubmenu(activeSubmenu === name ? null : name);
+  };
+
+  const togglePlaces = (e) => {
+    e.preventDefault();
+    e.stopPropagation(); // 关键：防止冒泡
+    setMobileDropdownOpen(!mobileDropdownOpen);
   };
 
   return (
@@ -28,23 +37,28 @@ export default function MobileNav({ isOpen, onClose }) {
       <nav className="mobile-nav">
         <Link to="/" tabIndex="0" onClick={onClose}>Home</Link>
 
-        <div className="mobile-dropdown">
+        {/* Places Dropdown */}
+        {/* 修复：将 active 类也加在父级 div 上，确保 CSS 箭头旋转生效 */}
+        <div className={`mobile-dropdown ${mobileDropdownOpen ? 'active' : ''}`}>
           <a 
             href="#" 
             className="mobile-dropdown-toggle" 
             tabIndex="0" 
-            onClick={(e) => { e.preventDefault(); setMobileDropdownOpen(!mobileDropdownOpen); }}
-            title="Coming Soon!"
+            onClick={togglePlaces}
+            title="Destinations"
           >
             Places <span className="arrow">▼</span>
           </a>
           
-          <div className={`mobile-dropdown-menu ${mobileDropdownOpen ? 'active' : ''}`} style={{ display: mobileDropdownOpen ? 'block' : 'none' }}>
+          <div 
+            className={`mobile-dropdown-menu ${mobileDropdownOpen ? 'active' : ''}`} 
+            style={{ display: mobileDropdownOpen ? 'block' : 'none' }}
+          >
             <Link to="/reminder#mobile-all" className="all-destinations" tabIndex="0" onClick={onClose}>All Destinations</Link>
 
             {/* 1. New York */}
-            <div className="mobile-submenu">
-              <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('NY')}>
+            <div className={`mobile-submenu ${activeSubmenu === 'NY' ? 'active' : ''}`}>
+              <a className="mobile-submenu-toggle" tabIndex="0" onClick={(e) => toggleSubmenu(e, 'NY')}>
                 New York <span className="arrow">▼</span>
               </a>
               <div className={`mobile-submenu-content ${activeSubmenu === 'NY' ? 'active' : ''}`} style={{ display: activeSubmenu === 'NY' ? 'block' : 'none' }}>
@@ -55,8 +69,8 @@ export default function MobileNav({ isOpen, onClose }) {
             </div>
 
             {/* 2. Florida */}
-            <div className="mobile-submenu">
-              <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('FL')}>
+            <div className={`mobile-submenu ${activeSubmenu === 'FL' ? 'active' : ''}`}>
+              <a className="mobile-submenu-toggle" tabIndex="0" onClick={(e) => toggleSubmenu(e, 'FL')}>
                 Florida <span className="arrow">▼</span>
               </a>
               <div className={`mobile-submenu-content ${activeSubmenu === 'FL' ? 'active' : ''}`} style={{ display: activeSubmenu === 'FL' ? 'block' : 'none' }}>
@@ -65,8 +79,8 @@ export default function MobileNav({ isOpen, onClose }) {
             </div>
 
             {/* 3. Nevada */}
-            <div className="mobile-submenu">
-              <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('NV')}>
+            <div className={`mobile-submenu ${activeSubmenu === 'NV' ? 'active' : ''}`}>
+              <a className="mobile-submenu-toggle" tabIndex="0" onClick={(e) => toggleSubmenu(e, 'NV')}>
                 Nevada <span className="arrow">▼</span>
               </a>
               <div className={`mobile-submenu-content ${activeSubmenu === 'NV' ? 'active' : ''}`} style={{ display: activeSubmenu === 'NV' ? 'block' : 'none' }}>
@@ -75,8 +89,8 @@ export default function MobileNav({ isOpen, onClose }) {
             </div>
 
             {/* 4. Utah */}
-            <div className="mobile-submenu">
-              <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('UT')}>
+            <div className={`mobile-submenu ${activeSubmenu === 'UT' ? 'active' : ''}`}>
+              <a className="mobile-submenu-toggle" tabIndex="0" onClick={(e) => toggleSubmenu(e, 'UT')}>
                 Utah <span className="arrow">▼</span>
               </a>
               <div className={`mobile-submenu-content ${activeSubmenu === 'UT' ? 'active' : ''}`} style={{ display: activeSubmenu === 'UT' ? 'block' : 'none' }}>
@@ -87,8 +101,8 @@ export default function MobileNav({ isOpen, onClose }) {
             </div>
 
             {/* 5. Arizona */}
-            <div className="mobile-submenu">
-              <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('AZ')}>
+            <div className={`mobile-submenu ${activeSubmenu === 'AZ' ? 'active' : ''}`}>
+              <a className="mobile-submenu-toggle" tabIndex="0" onClick={(e) => toggleSubmenu(e, 'AZ')}>
                 Arizona <span className="arrow">▼</span>
               </a>
               <div className={`mobile-submenu-content ${activeSubmenu === 'AZ' ? 'active' : ''}`} style={{ display: activeSubmenu === 'AZ' ? 'block' : 'none' }}>
@@ -100,8 +114,8 @@ export default function MobileNav({ isOpen, onClose }) {
             </div>
 
             {/* 6. New Mexico */}
-            <div className="mobile-submenu">
-              <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('NM')}>
+            <div className={`mobile-submenu ${activeSubmenu === 'NM' ? 'active' : ''}`}>
+              <a className="mobile-submenu-toggle" tabIndex="0" onClick={(e) => toggleSubmenu(e, 'NM')}>
                 New Mexico <span className="arrow">▼</span>
               </a>
               <div className={`mobile-submenu-content ${activeSubmenu === 'NM' ? 'active' : ''}`} style={{ display: activeSubmenu === 'NM' ? 'block' : 'none' }}>
@@ -110,8 +124,8 @@ export default function MobileNav({ isOpen, onClose }) {
             </div>
 
             {/* 7. Pennsylvania */}
-            <div className="mobile-submenu">
-              <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('PA')}>
+            <div className={`mobile-submenu ${activeSubmenu === 'PA' ? 'active' : ''}`}>
+              <a className="mobile-submenu-toggle" tabIndex="0" onClick={(e) => toggleSubmenu(e, 'PA')}>
                 Peninsula <span className="arrow">▼</span>
               </a>
               <div className={`mobile-submenu-content ${activeSubmenu === 'PA' ? 'active' : ''}`} style={{ display: activeSubmenu === 'PA' ? 'block' : 'none' }}>
@@ -125,8 +139,8 @@ export default function MobileNav({ isOpen, onClose }) {
             </div>
 
             {/* 9. Washington State */}
-            <div className="mobile-submenu">
-              <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('WA')}>
+            <div className={`mobile-submenu ${activeSubmenu === 'WA' ? 'active' : ''}`}>
+              <a className="mobile-submenu-toggle" tabIndex="0" onClick={(e) => toggleSubmenu(e, 'WA')}>
                 Washington <span className="arrow">▼</span>
               </a>
               <div className={`mobile-submenu-content ${activeSubmenu === 'WA' ? 'active' : ''}`} style={{ display: activeSubmenu === 'WA' ? 'block' : 'none' }}>
@@ -136,8 +150,8 @@ export default function MobileNav({ isOpen, onClose }) {
             </div>
 
             {/* 10. Michigan */}
-            <div className="mobile-submenu">
-              <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('MI')}>
+            <div className={`mobile-submenu ${activeSubmenu === 'MI' ? 'active' : ''}`}>
+              <a className="mobile-submenu-toggle" tabIndex="0" onClick={(e) => toggleSubmenu(e, 'MI')}>
                 Michigan <span className="arrow">▼</span>
               </a>
               <div className={`mobile-submenu-content ${activeSubmenu === 'MI' ? 'active' : ''}`} style={{ display: activeSubmenu === 'MI' ? 'block' : 'none' }}>
@@ -147,8 +161,8 @@ export default function MobileNav({ isOpen, onClose }) {
             </div>
 
             {/* 11. Ohio */}
-            <div className="mobile-submenu">
-              <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('OH')}>
+            <div className={`mobile-submenu ${activeSubmenu === 'OH' ? 'active' : ''}`}>
+              <a className="mobile-submenu-toggle" tabIndex="0" onClick={(e) => toggleSubmenu(e, 'OH')}>
                 Ohio <span className="arrow">▼</span>
               </a>
               <div className={`mobile-submenu-content ${activeSubmenu === 'OH' ? 'active' : ''}`} style={{ display: activeSubmenu === 'OH' ? 'block' : 'none' }}>
@@ -159,7 +173,15 @@ export default function MobileNav({ isOpen, onClose }) {
           </div>
         </div>
 
-        <a href="/#gallery" tabIndex="0" onClick={onClose}>Photography</a>
+        {/* ✅ 这里修改了 Gallery 链接 */}
+        <a 
+          href="/Shirley_Travel_Journal/#gallery" 
+          tabIndex="0" 
+          onClick={onClose}
+        >
+          Photography
+        </a>
+        
         <Link to="/about" tabIndex="0" onClick={onClose}>About Me</Link>
         <Link to="/reminder#mobile-coffee" className="mobile-donate" tabIndex="0" onClick={onClose}>Tip A Coffee☕</Link>
       </nav>
