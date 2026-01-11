@@ -12,7 +12,7 @@ export default function About() {
           <p className="tagline">Wanderer • Photographer • Storyteller</p>
         </div>
         <div className="hero-image">
-          <img src="/Shirley_Travel_Journal/image/cover.jpg" alt="Shirley" />
+          <img src="/Shirley_Travel_Journal/images/cover.jpg" alt="Shirley" />
         </div>
       </section>
 
@@ -41,7 +41,7 @@ export default function About() {
                 </p>
               </div>
               <div className="story-image">
-                <img src="/Shirley_Travel_Journal/image/about_me.jpg" alt="Travel moment" />
+                <img src="/Shirley_Travel_Journal/images/about_me.jpg" alt="Travel moment" />
               </div>
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function About() {
             
             <div className="social-links">
               <a href="https://www.xiaohongshu.com/user/profile/644ca9b3000000000c035df4" target="_blank" rel="noopener noreferrer" aria-label="redNote" className="redNote">
-                <img src="/Shirley_Travel_Journal/image/xiaohongshu.png" alt="xiaohongshu icon" />
+                <img src="/Shirley_Travel_Journal/images/xiaohongshu.png" alt="xiaohongshu icon" />
               </a>
 
               <a href="https://www.facebook.com/profile.php?id=61575247652100" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="facebook">
