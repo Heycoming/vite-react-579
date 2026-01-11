@@ -5,7 +5,6 @@ export default function MobileNav({ isOpen, onClose }) {
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
 
-  // 当菜单关闭时，重置内部折叠状态
   useEffect(() => {
     if (!isOpen) {
       setMobileDropdownOpen(false);
@@ -21,7 +20,7 @@ export default function MobileNav({ isOpen, onClose }) {
     <div className={`mobile-menu-overlay ${isOpen ? 'active' : ''}`} style={{ display: isOpen ? 'block' : 'none' }}>
       <div className="mobile-menu-header">
         <div className="logo" tabIndex="0">
-          <img src="/Shirley_Travel_Journal/images/logo.png" alt="Logo for the Whole website, which is a slice of carrot" />
+          <img src="/Shirley_Travel_Journal/images/logo.png" alt="Logo" />
         </div>
         <div className="close-menu" tabIndex="0" onClick={onClose}>✕</div>
       </div>
@@ -43,7 +42,7 @@ export default function MobileNav({ isOpen, onClose }) {
           <div className={`mobile-dropdown-menu ${mobileDropdownOpen ? 'active' : ''}`} style={{ display: mobileDropdownOpen ? 'block' : 'none' }}>
             <Link to="/reminder#mobile-all" className="all-destinations" tabIndex="0" onClick={onClose}>All Destinations</Link>
 
-            {/* Mobile Submenu: New York */}
+            {/* 1. New York */}
             <div className="mobile-submenu">
               <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('NY')}>
                 New York <span className="arrow">▼</span>
@@ -55,7 +54,7 @@ export default function MobileNav({ isOpen, onClose }) {
               </div>
             </div>
 
-            {/* Mobile Submenu: Florida */}
+            {/* 2. Florida */}
             <div className="mobile-submenu">
               <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('FL')}>
                 Florida <span className="arrow">▼</span>
@@ -65,7 +64,7 @@ export default function MobileNav({ isOpen, onClose }) {
               </div>
             </div>
 
-            {/* Mobile Submenu: Nevada */}
+            {/* 3. Nevada */}
             <div className="mobile-submenu">
               <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('NV')}>
                 Nevada <span className="arrow">▼</span>
@@ -75,7 +74,7 @@ export default function MobileNav({ isOpen, onClose }) {
               </div>
             </div>
 
-            {/* Mobile Submenu: Utah */}
+            {/* 4. Utah */}
             <div className="mobile-submenu">
               <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('UT')}>
                 Utah <span className="arrow">▼</span>
@@ -87,7 +86,7 @@ export default function MobileNav({ isOpen, onClose }) {
               </div>
             </div>
 
-            {/* Mobile Submenu: Arizona */}
+            {/* 5. Arizona */}
             <div className="mobile-submenu">
               <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('AZ')}>
                 Arizona <span className="arrow">▼</span>
@@ -100,7 +99,7 @@ export default function MobileNav({ isOpen, onClose }) {
               </div>
             </div>
 
-            {/* Mobile Submenu: New Mexico */}
+            {/* 6. New Mexico */}
             <div className="mobile-submenu">
               <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('NM')}>
                 New Mexico <span className="arrow">▼</span>
@@ -110,7 +109,7 @@ export default function MobileNav({ isOpen, onClose }) {
               </div>
             </div>
 
-            {/* Mobile Submenu: Pennsylvania */}
+            {/* 7. Pennsylvania */}
             <div className="mobile-submenu">
               <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('PA')}>
                 Peninsula <span className="arrow">▼</span>
@@ -120,12 +119,12 @@ export default function MobileNav({ isOpen, onClose }) {
               </div>
             </div>
 
-            {/* Mobile Submenu: Washington DC */}
+            {/* 8. Washington DC */}
             <div className="mobile-submenu">
               <a className="mobile-submenu-toggle" tabIndex="0">Washington DC <span className="arrow">▼</span></a>
             </div>
 
-            {/* Mobile Submenu: Washington */}
+            {/* 9. Washington State */}
             <div className="mobile-submenu">
               <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('WA')}>
                 Washington <span className="arrow">▼</span>
@@ -136,7 +135,7 @@ export default function MobileNav({ isOpen, onClose }) {
               </div>
             </div>
 
-            {/* Mobile Submenu: Michigan */}
+            {/* 10. Michigan */}
             <div className="mobile-submenu">
               <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('MI')}>
                 Michigan <span className="arrow">▼</span>
@@ -147,7 +146,7 @@ export default function MobileNav({ isOpen, onClose }) {
               </div>
             </div>
 
-            {/* Mobile Submenu: Ohio */}
+            {/* 11. Ohio */}
             <div className="mobile-submenu">
               <a className="mobile-submenu-toggle" tabIndex="0" onClick={() => toggleSubmenu('OH')}>
                 Ohio <span className="arrow">▼</span>

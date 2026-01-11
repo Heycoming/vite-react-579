@@ -23,7 +23,7 @@ export default function DesktopNav({ mobileMenuOpen, toggleMobileMenu }) {
           <div className="dropdown-menu">
             <Link to="/reminder#all" className="all-destinations" tabIndex="0" title="Coming Soon!">All Destinations</Link>
 
-            {/* New York */}
+            {/* 1. New York */}
             <div className="dropdown-submenu">
               <a className="submenu-toggle" tabIndex="0">New York <span className="arrow-right">›</span></a>
               <div className="submenu-content">
@@ -33,7 +33,7 @@ export default function DesktopNav({ mobileMenuOpen, toggleMobileMenu }) {
               </div>
             </div>
 
-            {/* Florida */}
+            {/* 2. Florida */}
             <div className="dropdown-submenu">
               <a className="submenu-toggle" tabIndex="0">Florida <span className="arrow-right">›</span></a>
               <div className="submenu-content">
@@ -41,7 +41,7 @@ export default function DesktopNav({ mobileMenuOpen, toggleMobileMenu }) {
               </div>
             </div>
 
-            {/* Nevada */}
+            {/* 3. Nevada */}
             <div className="dropdown-submenu">
               <a className="submenu-toggle" tabIndex="0">Nevada <span className="arrow-right">›</span></a>
               <div className="submenu-content">
@@ -49,7 +49,7 @@ export default function DesktopNav({ mobileMenuOpen, toggleMobileMenu }) {
               </div>
             </div>
 
-            {/* Utah */}
+            {/* 4. Utah */}
             <div className="dropdown-submenu">
               <a className="submenu-toggle" tabIndex="0">Utah <span className="arrow-right">›</span></a>
               <div className="submenu-content">
@@ -59,7 +59,7 @@ export default function DesktopNav({ mobileMenuOpen, toggleMobileMenu }) {
               </div>
             </div>
 
-            {/* Arizona */}
+            {/* 5. Arizona */}
             <div className="dropdown-submenu">
               <a className="submenu-toggle" tabIndex="0">Arizona <span className="arrow-right">›</span></a>
               <div className="submenu-content">
@@ -70,7 +70,7 @@ export default function DesktopNav({ mobileMenuOpen, toggleMobileMenu }) {
               </div>
             </div>
 
-            {/* New Mexico */}
+            {/* 6. New Mexico */}
             <div className="dropdown-submenu">
               <a className="submenu-toggle" tabIndex="0">New Mexico <span className="arrow-right">›</span></a>
               <div className="submenu-content">
@@ -78,7 +78,7 @@ export default function DesktopNav({ mobileMenuOpen, toggleMobileMenu }) {
               </div>
             </div>
 
-            {/* Pennsylvania */}
+            {/* 7. Pennsylvania */}
             <div className="dropdown-submenu">
               <a className="submenu-toggle" tabIndex="0">Pennsylvania <span className="arrow-right">›</span></a>
               <div className="submenu-content">
@@ -86,12 +86,12 @@ export default function DesktopNav({ mobileMenuOpen, toggleMobileMenu }) {
               </div>
             </div>
 
-            {/* Washington DC */}
+            {/* 8. Washington DC (注意：原HTML中DC没有子菜单内容) */}
             <div className="dropdown-submenu">
               <a className="submenu-toggle" tabIndex="0">Washington DC <span className="arrow-right"></span></a>
             </div>
 
-            {/* Washington */}
+            {/* 9. Washington State */}
             <div className="dropdown-submenu">
               <a className="submenu-toggle" tabIndex="0">Washington <span className="arrow-right">›</span></a>
               <div className="submenu-content">
@@ -100,7 +100,7 @@ export default function DesktopNav({ mobileMenuOpen, toggleMobileMenu }) {
               </div>
             </div>
 
-            {/* Michigan */}
+            {/* 10. Michigan */}
             <div className="dropdown-submenu">
               <a className="submenu-toggle" tabIndex="0">Michigan <span className="arrow-right">›</span></a>
               <div className="submenu-content">
@@ -109,7 +109,7 @@ export default function DesktopNav({ mobileMenuOpen, toggleMobileMenu }) {
               </div>
             </div>
 
-            {/* Ohio */}
+            {/* 11. Ohio */}
             <div className="dropdown-submenu">
               <a className="submenu-toggle" tabIndex="0">Ohio <span className="arrow-right">›</span></a>
               <div className="submenu-content">
@@ -122,7 +122,7 @@ export default function DesktopNav({ mobileMenuOpen, toggleMobileMenu }) {
 
       {/* Logo */}
       <Link to="/" className="logo" tabIndex="0">
-        <img src="/Shirley_Travel_Journal/images/logo.png" alt="Logo for the Whole website, which is a slice of carrot" />
+        <img src="/Shirley_Travel_Journal/images/logo.png" alt="Logo" />
       </Link>
 
       {/* Desktop Right Navigation */}
