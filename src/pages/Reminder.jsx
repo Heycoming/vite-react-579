@@ -91,10 +91,10 @@ export default function Reminder() {
 }
 
 // 简单的样式对象，用于覆盖链接颜色，保持和 HTML 一致
-// const styles = {
-//   link: {
-//     color: '#fff',
-//     textDecoration: 'underline',
-//     cursor: 'pointer'
-//   }
-// };
+const styles = {
+  link: {
+    color: '#fff',
+    textDecoration: 'underline',
+    cursor: 'pointer'
+  }
+};
