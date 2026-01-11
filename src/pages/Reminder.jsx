@@ -53,33 +53,33 @@ export default function Reminder() {
 }
 
 // 简单的内联样式，保证这个页面即使没有 CSS 也能居中显示
-const styles = {
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    minHeight: '60vh', // 占据大部分屏幕高度
-    textAlign: 'center',
-    padding: '20px'
-  },
-  card: {
-    background: 'rgba(255, 255, 255, 0.05)',
-    padding: '40px',
-    borderRadius: '15px',
-    backdropFilter: 'blur(10px)',
-    border: '1px solid rgba(255, 255, 255, 0.1)',
-    maxWidth: '500px',
-    width: '100%'
-  },
-  title: {
-    fontSize: '2rem',
-    marginBottom: '20px',
-    color: '#ffd700' // 金色
-  },
-  text: {
-    fontSize: '1.2rem',
-    marginBottom: '30px',
-    lineHeight: '1.6',
-    color: 'rgba(255, 255, 255, 0.8)'
-  }
-};
+// const styles = {
+//   container: {
+//     display: 'flex',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     minHeight: '60vh', // 占据大部分屏幕高度
+//     textAlign: 'center',
+//     padding: '20px'
+//   },
+//   card: {
+//     background: 'rgba(255, 255, 255, 0.05)',
+//     padding: '40px',
+//     borderRadius: '15px',
+//     backdropFilter: 'blur(10px)',
+//     border: '1px solid rgba(255, 255, 255, 0.1)',
+//     maxWidth: '500px',
+//     width: '100%'
+//   },
+//   title: {
+//     fontSize: '2rem',
+//     marginBottom: '20px',
+//     color: '#ffd700' // 金色
+//   },
+//   text: {
+//     fontSize: '1.2rem',
+//     marginBottom: '30px',
+//     lineHeight: '1.6',
+//     color: 'rgba(255, 255, 255, 0.8)'
+//   }
+// };
