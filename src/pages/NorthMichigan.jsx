@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import DaysGallery from '../components/DaysGallery';
-import michiganData from '../data/destinations';
+import {michiganData} from '../data/destinations';
 export default function NorthMichigan() {
   useEffect(() => {
     window.scrollTo(0, 0);
