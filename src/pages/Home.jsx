@@ -332,7 +332,7 @@ export default function Home() {
                 <div className="location-tag">Eastern</div>
                 <h3>North Michigan, Michigan</h3>
                 <p className="description">Northern Michigan is a land where sapphire lakes kiss endless forests, and the air carries the scent of pine and possibility, a quiet haven where nature's beauty feels boundless and eternal.</p>
-                <Link to="/north-michigan" className="read-more" tabIndex={0}>Explore →</Link>
+                <Link to="/NorthMichigan" className="read-more" tabIndex={0}>Explore →</Link>
               </div>
             </div>
 
