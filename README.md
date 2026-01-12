@@ -23,6 +23,17 @@ This application is a complete rewrite of an original static website. The goal o
     *   Implemented `react-router-dom` for seamless client-side routing.
     *   Created a responsive navigation system that shares data between desktop and mobile views but renders optimized layouts for each.
 
+## Project Structure
+
+```text
+src/
+├── components/      # Reusable UI components (Nav, Slider, Cards)
+├── data/            # Static data arrays (destinations, blog content)
+├── pages/           # Page views (Home, NorthMichigan, About)
+├── images/          # Static assets
+└── App.jsx          # Main application entry and routing
+```
+
 ## Development & Deployment
 
 ### Local Development
@@ -45,22 +56,3 @@ This project utilizes **GitHub Actions** for Continuous Deployment. Manual build
 
 *   **Workflow:** The `deploy.yml` configuration file automatically triggers the build and deployment process.
 *   **Trigger:** Pushing changes to the main branch will automatically build the React application using Vite and deploy the static assets to the hosting environment.
-
----
-
-## React + Vite Configuration
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-*   @vitejs/plugin-react uses Babel (or oxc when used in rolldown-vite) for Fast Refresh
-*   @vitejs/plugin-react-swc uses SWC for Fast Refresh
-
-### React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see this documentation.
-
-### Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the TS template for information on how to integrate TypeScript and typescript-eslint in your project.
