@@ -4,7 +4,6 @@ import { useLocation, Link } from 'react-router-dom';
 export default function Reminder() {
   const location = useLocation();
   
-  // 默认状态：对应你 HTML 中的默认文本
   const [content, setContent] = useState({
     title: "Not Implemented",
     metaTop: "Coming Soon",
@@ -15,7 +14,6 @@ export default function Reminder() {
   useEffect(() => {
     const hash = location.hash;
 
-    // 根据 Hash 改变显示的标题和描述
     switch(hash) {
       case '#coffee':
         setContent({
@@ -41,9 +39,7 @@ export default function Reminder() {
           description: "Photos of the beautiful waterfalls are being developed."
         });
         break;
-      // ... 你可以继续添加其他 case，比如 #miami, #vegas 等
       default:
-        // 如果是其他未定义的 hash，或者没有 hash，保持默认
         setContent({
           title: "Not Implemented",
           metaTop: "Coming Soon",
@@ -55,7 +51,6 @@ export default function Reminder() {
 
   return (
     <main id="maincon">
-      {/* 复用 About 页面的 Hero 结构 */}
       <section id="about-hero">
         <div className="hero-content" tabIndex="0">
           <div className="meta">{content.metaTop}</div>
@@ -67,7 +62,6 @@ export default function Reminder() {
             Please visit my implemented pages:
           </p>
           
-          {/* 底部导航链接 */}
           <p className="tagline" style={{ marginTop: '20px', fontSize: '18px' }}>
             <Link to="/" style={styles.link}>Home</Link> 
             &nbsp;•&nbsp; 
@@ -78,7 +72,6 @@ export default function Reminder() {
         </div>
         
         <div className="hero-image">
-          {/* 确保图片路径正确 */}
           <img 
             src="/Shirley_Travel_Journal/images/cover.jpg" 
             alt="Page under construction" 
@@ -90,7 +83,6 @@ export default function Reminder() {
   );
 }
 
-// 简单的样式对象，用于覆盖链接颜色，保持和 HTML 一致
 const styles = {
   link: {
     color: '#fff',
